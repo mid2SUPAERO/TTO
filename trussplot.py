@@ -538,9 +538,7 @@ class plot2D():
         cls.plotTruss(myBCs, a, q, max(a) * tol, vol, thick, folder)
         cls.plotTrussStress(myBCs, a, q, max(a) * tol, stress_tension_max, stress_compression_max, thick, folder)
         if sum(U) != 0:
-            for mag in (0.1,1,2,5,10):
-                cls.plotTrussDeformation(myBCs, a, q, U, max(a) * tol, mag, folder, axis=True)
-                cls.plotTrussDeformation(myBCs, a, q, U, max(a) * tol, mag, folder, axis=False)
+            cls.plotTrussDeformation(myBCs, a, q, U, max(a) * tol, 1, folder, axis=False)
         cls.plotTrussRF(myBCs, a, q, max(a) * tol, stress_tension_max, stress_compression_max, thick, folder)
         if np.any(obj_hist) != False: 
             plotObjHistory(obj_hist, folder)
@@ -564,9 +562,7 @@ class plot2D():
         cls.plotTrussBucklingCheck(myBCs, a, q, max(a) * tol, s_buck, thick, folder)
         cls.plotTrussBuckling(myBCs, a, q, max(a) * tol, s_buck, thick, folder)
         if sum(U) != 0:
-            for mag in (0.1,1,10):
-                cls.plotTrussDeformation(myBCs, a, q, U, max(a) * tol, mag, thick, folder, axis=True)
-                cls.plotTrussDeformation(myBCs, a, q, U, max(a) * tol, mag, thick, folder, axis=False)
+            cls.plotTrussDeformation(myBCs, a, q, U, max(a) * tol, 1, thick, folder, axis=False)
         cls.plotTrussRF(myBCs, a, q, max(a) * tol, stress_tension_max, stress_compression_max, thick, folder)
         if np.any(obj_hist) != False: 
             plotObjHistory(obj_hist, folder)
@@ -598,9 +594,7 @@ class plot2D():
         cls.plotTrussBuckling_ML(myBCs, a, q, tol, s_buck, thick, foldername=folder)
             
         if np.sum(U[:]) != 0:
-            for mag in (1,2):
-                cls.plotTrussDeformation(myBCs, a, q, U, tol, mag, thick, foldername=folder, axis=True)
-                cls.plotTrussDeformation(myBCs, a, q, U, tol, mag, thick, foldername=folder, axis=False)
+            cls.plotTrussDeformation(myBCs, a, q, U, tol, 1, thick, foldername=folder, axis=False)
         
         if np.any(obj_hist) != False: 
             plotObjHistory(obj_hist, foldername=folder)

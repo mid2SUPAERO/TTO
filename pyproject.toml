@@ -1,0 +1,7 @@
+[project]
+name = "TTO"
+version = "0.1.0"
+description = "Truss Topology Optimization (TTO) for 2D and 3D cellular and monolithic structures. Stress and topological buckling constraints."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []

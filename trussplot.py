@@ -11,16 +11,6 @@ import scipy.sparse as sp
 from matplotlib import collections as mc
 from mpl_toolkits.mplot3d.art3d import Line3DCollection
 
-# matplotlib.use("pgf")
-matplotlib.rcParams.update(
-    {
-        "pgf.texsystem": "pdflatex",
-        "font.family": "serif",
-        "text.usetex": True,
-        "pgf.rcfonts": False,
-    }
-)
-
 sample = 8
 norm = matplotlib.colors.Normalize(
     vmin=0, vmax=sample - 1
